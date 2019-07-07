@@ -20,3 +20,14 @@ print(df)
 print(df.loc['G1'])
 # Deeper index
 print(df.loc['G1'].loc[1])
+
+# Give Multiplayer index columns names
+df.index.names = ['Groups', 'Num']
+print(df)
+print(df.index.names)
+
+print(df.loc['G2'].loc[2]['B'])
+
+# Cross sections
+print(df.xs('G1'))
+print(df.xs(1, level='Num'))
