@@ -33,3 +33,21 @@ print(resultdf['X'])
 
 # Stack Dataframe functionality
 print(df[df['W'] > 0]['X'])
+print(df[df['W'] > 0][['Y', 'X']])
+
+# Multiple dataframe conditionals
+# Won't work
+#print(df[(df['W' > 0]) and (df['Y' > 1])])
+
+# Must use (&) or (|) = ('and'/'or')
+print(df[(df['W'] > 0) & (df['Y'] > 1)])
+print(df[(df['W'] > 0) | (df['Y'] > 1)])
+
+# Reset Dataframe index to numerical (non perm)
+print(df.reset_index())
+
+# Reset Dataframe to new Index (permanent)
+newInd = 'CA NY WY OR CO'.split()
+print(newInd)
+df['States'] = newInd
+print(df.set_index('States'))
