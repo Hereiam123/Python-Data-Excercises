@@ -20,3 +20,24 @@ print(pd.Series(d))
 
 # Series of labels
 print(pd.Series(labels))
+
+# Series of functions
+print(pd.Series([sum, print, len]))
+
+# Series in Variable
+ser1 = pd.Series([1, 2, 3, 4], ['USA', 'Germany', 'USSR', 'Japan'])
+
+print(ser1)
+
+ser2 = pd.Series([1, 2, 5, 4], ['USA', 'Germany', 'Italy', 'Japan'])
+
+print(ser2)
+
+print(ser1['USA'])
+
+ser3 = pd.Series(data=labels)
+
+print(ser3[0])
+
+# Attempt to add Series together with unaligned values
+print(ser1 + ser2)
