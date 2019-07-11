@@ -18,3 +18,53 @@ df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
                     'C': ['C8', 'C9', 'C10', 'C11'],
                     'D': ['D8', 'D9', 'D10', 'D11']},
                    index=[8, 9, 10, 11])
+
+print(df1)
+print(df2)
+print(df3)
+
+# Concat Dataframes
+print(pd.concat([df1, df2, df3]))
+
+# Concat on Columns (Nan due to lack of index values)
+print(pd.concat([df1, df2, df3], axis=1))
+
+left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                     'A': ['A0', 'A1', 'A2', 'A3'],
+                     'B': ['B0', 'B1', 'B2', 'B3']})
+
+right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
+                      'C': ['C0', 'C1', 'C2', 'C3'],
+                      'D': ['D0', 'D1', 'D3', 'D4']})
+
+
+# Look at merging Dataframes, on key value
+print(left)
+print(right)
+
+# Inner merge on key value
+print(pd.merge(left, right, how='inner', on='key'))
+
+# Explicity state which key to merge on
+left = pd.DataFrame({'key1': ['K0', 'K0', 'K1', 'K2'],
+                     'key2': ['K0', 'K1', 'K0', 'K1'],
+                     'A': ['A0', 'A1', 'A2', 'A3'],
+                     'B': ['B0', 'B1', 'B2', 'B3']})
+
+right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
+                      'key2': ['K0', 'K0', 'K0', 'K0'],
+                      'C': ['C0', 'C1', 'C2', 'C3'],
+                      'D': ['D0', 'D1', 'D3', 'D3']})
+
+print(pd.merge(left, right, on=['key1', 'key2']))
+print(pd.merge(left, right, how='outer', on=['key1', 'key2']))
+print(pd.merge(left, right, how='right', on=['key1', 'key2']))
+
+# Joins
+left = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
+                     'B': ['B0', 'B1', 'B2']}, index=['K0', 'K1', 'K2'])
+right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
+                      'D': ['D0', 'D2', 'D3']},
+                     index=['K0', 'K2', 'K3'])
+
+print(left.join(right))
