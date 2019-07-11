@@ -68,3 +68,4 @@ right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
                      index=['K0', 'K2', 'K3'])
 
 print(left.join(right))
+print(left.join(right, how="outer"))
