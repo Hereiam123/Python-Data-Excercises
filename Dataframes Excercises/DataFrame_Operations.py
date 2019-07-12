@@ -28,3 +28,6 @@ def times2(x):
 print(df['col1'].apply(times2))
 
 print(df['col3'].apply(len))
+
+# Using lambda functions
+print(df['col2'].apply(lambda x: x*2))
