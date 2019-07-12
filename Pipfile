@@ -10,6 +10,10 @@ autopep8 = "*"
 [packages]
 pandas = "*"
 numpy = "*"
+sqlalchemy = "*"
+lxml = "*"
+html5lib = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.7"
