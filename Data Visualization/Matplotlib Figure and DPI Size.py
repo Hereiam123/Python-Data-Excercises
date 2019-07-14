@@ -19,4 +19,7 @@ axes[1].plot(y, x)
 # Tighten Layout
 plt.tight_layout()
 
+# Save figure to output file
+fig.savefig('Saved Figs/my_picture.png', dpi=200)
+
 plt.show()
