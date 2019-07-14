@@ -46,5 +46,9 @@ axes2.plot(y, x)
 
 axes2.set_title('Smaller Plot')
 
+# Using subplots method
+fig = plt.figure()
+fig, axes = plt.subplots(nrows=2, ncols=2)
+
 # Show plots
 plt.show()
