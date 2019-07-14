@@ -15,11 +15,23 @@ plt.xlabel('X label')
 plt.ylabel('Y label')
 plt.title('Title')
 
+# Multiple subplots
 plt.subplot(1, 2, 1)
 plt.plot(x, y, 'r')
 plt.subplot(1, 2, 2)
-
 plt.plot(y, x, 'b')
 
-# Show plot
+# Object oriented plot intro
+fig = plt.figure()
+
+# Setting axes values
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+
+# Plotting data on axes
+axes.plot(x, y)
+axes.set_xlabel('X Label')
+axes.set_ylabel('Y Label')
+axes.set_title('Set Title')
+
+# Show plots
 plt.show()
