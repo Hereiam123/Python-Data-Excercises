@@ -14,6 +14,7 @@ sqlalchemy = "*"
 lxml = "*"
 html5lib = "*"
 beautifulsoup4 = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.7"
