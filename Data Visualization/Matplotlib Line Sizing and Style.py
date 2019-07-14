@@ -23,7 +23,15 @@ ax.plot(x, y, color="#FF8C00")
 # Setting marker size
 # Setting marker color
 # Setting marker edge width and color
-ax2.plot(y, x, color="purple", linewidth=3,
-         alpha=0.5, linestyle='-', marker='o', markersize=20, markerfacecolor='yellow', markeredgewidth=3, markeredgecolor="green")
+# ax2.plot(y, x, color="purple", linewidth=3,
+#         alpha=0.5, linestyle='-', marker='o', markersize=20, markerfacecolor='yellow', markeredgewidth=3, markeredgecolor="green")
+
+
+ax2.plot(y, x, color="orange", linewidth=2,
+         alpha=0.5, linestyle='--')
+
+# Setting x and y limiter for plot
+ax2.set_xlim([0, 1])
+ax2.set_ylim([0, 2])
 
 plt.show()
