@@ -7,9 +7,17 @@ y = x**2
 
 fig = plt.figure()
 ax = fig.add_axes([0, 0, 1, 1])
+ax2 = fig.add_axes([0, 0, 1, 1])
+
 
 # Set line color with basic color syntax
 ax.plot(x, y, color='orange')
 
 # Using RGB values
 ax.plot(x, y, color="#FF8C00")
+
+# Setting line width against default width
+# Setting line alpha value (transparency)
+ax2.plot(y, x, color="purple", linewidth=3, alpha=0.5)
+
+plt.show()
