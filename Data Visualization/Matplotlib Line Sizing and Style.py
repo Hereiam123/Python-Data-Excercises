@@ -19,6 +19,9 @@ ax.plot(x, y, color="#FF8C00")
 # Setting line width against default width
 # Setting line alpha value (transparency)
 # Setting line style
-ax2.plot(y, x, color="purple", linewidth=3, alpha=0.5, linestyle='--')
+# Setting marker to reveal data points for plot
+ax2.plot(y, x, color="purple", linewidth=3,
+         alpha=0.5, linestyle='--', marker='o')
+
 
 plt.show()
