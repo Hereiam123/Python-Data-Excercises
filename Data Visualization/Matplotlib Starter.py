@@ -50,5 +50,15 @@ axes2.set_title('Smaller Plot')
 fig = plt.figure()
 fig, axes = plt.subplots(nrows=2, ncols=2)
 
+# Show that this is an array of Matplotlib axes, and editable by index
+for current_ax in axes:
+    print(current_ax)
+
+#axes[0].plot(x, y)
+#axes[0].set_title('First Plot')
+#axes[1].plot(y, x)
+#axes[1].set_title('Second Plot')
+# plt.tight_layout()
+
 # Show plots
 plt.show()
