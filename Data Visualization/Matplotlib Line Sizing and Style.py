@@ -18,6 +18,7 @@ ax.plot(x, y, color="#FF8C00")
 
 # Setting line width against default width
 # Setting line alpha value (transparency)
-ax2.plot(y, x, color="purple", linewidth=3, alpha=0.5)
+# Setting line style
+ax2.plot(y, x, color="purple", linewidth=3, alpha=0.5, linestyle='--')
 
 plt.show()
