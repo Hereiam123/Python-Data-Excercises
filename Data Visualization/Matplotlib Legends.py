@@ -14,6 +14,8 @@ ax = fig.add_axes([0, 0, 1, 1])
 # Add legend to plot with labels
 ax.plot(x, x**2, label='X Squared')
 ax.plot(x, x**3, label='X Cubed')
-ax.legend()
+
+# Position legend with loc value
+ax.legend(loc=10)
 
 plt.show()
