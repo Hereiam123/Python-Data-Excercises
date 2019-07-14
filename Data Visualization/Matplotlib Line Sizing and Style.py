@@ -20,8 +20,10 @@ ax.plot(x, y, color="#FF8C00")
 # Setting line alpha value (transparency)
 # Setting line style
 # Setting marker to reveal data points for plot
+# Setting marker size
+# Setting marker color
+# Setting marker edge width and color
 ax2.plot(y, x, color="purple", linewidth=3,
-         alpha=0.5, linestyle='--', marker='o')
-
+         alpha=0.5, linestyle='-', marker='o', markersize=20, markerfacecolor='yellow', markeredgewidth=3, markeredgecolor="green")
 
 plt.show()
