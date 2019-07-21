@@ -20,16 +20,18 @@ sns.jointplot(x='total_bill', y='tip', data=tips, kind='reg')
 # Kde will show density within joint values
 sns.jointplot(x='total_bill', y='tip', data=tips, kind='kde')
 
+# Rugplot draws dashed plot of datapoint listed in column
+# Below
+sns.rugplot(tips['total_bill'])
+
+# KDE plot
+sns.kdeplot(tips['total_bill'])
+
 # Pair plot will act as a jointplot across all numerical columns
 # In a dataframe
 
 # Hue will allow string values in a column to be plotted
 # Based on listed column
 sns.pairplot(tips, hue='sex', palette='coolwarm')
-
-# Rugplot draws dashed plot of datapoint listed in column
-# Below
-sns.rugplot(tips['total_bill'])
-
 
 plt.show()
