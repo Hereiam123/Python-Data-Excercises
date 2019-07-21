@@ -27,6 +27,6 @@ sns.heatmap(fp, cmap='magma', linecolor='white', linewidths=1)
 # plt.show()
 
 # Cluster map, cluster columns based on similarity of data
-# points
-sns.clustermap(fp)
+# points. Standard scale normalizes the scale
+sns.clustermap(fp, standard_scale=1)
 plt.show()
