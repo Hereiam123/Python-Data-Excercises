@@ -16,6 +16,18 @@ print(tips.head())
 
 # Violin Plots, similar to boxplot
 # Show distribution of data across a category
-sns.violinplot(x='day', y='total_bill', data=tips, hue='sex', split=True)
+#sns.violinplot(x='day', y='total_bill', data=tips, hue='sex', split=True)
+
+# Draws scatterplot, where one variable is categorical
+# Jitter helps to differentiate very similar, possibly stacked poiints
+# sns.stripplot(x='day', y='total_bill', data=tips,
+#             jitter=True, hue='sex', split=True)
+
+# Combining Violin above with Swarm below to show
+# Overall similarity between visual presentation
+#sns.swarmplot(x='day', y='total_bill', data=tips, color='black')
+
+# Good for group comparison
+sns.factorplot(x='day', y='total_bill', data=tips, kind='bar')
 
 plt.show()
