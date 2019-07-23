@@ -16,6 +16,8 @@ html5lib = "*"
 beautifulsoup4 = "*"
 matplotlib = "*"
 seaborn = "*"
+plotly = "*"
+cufflinks = "*"
 
 [requires]
 python_version = "3.7"
