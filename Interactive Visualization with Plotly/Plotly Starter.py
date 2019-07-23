@@ -1,19 +1,19 @@
-import pandas as pd
+import plotly.graph_objs as go
 import numpy as np
-import cufflinks as cf
+from plotly import __version__
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+print(__version__)  # requires version >= 1.9.0
 
-# Connect interactivity with JS library
+# Always run this the command before at the start of notebook
 init_notebook_mode(connected=True)
 
-# Create offline option
-cf.go_offline()
+x = np.array([2, 5, 8, 0, 2, -8, 4, 3, 1])
+y = np.array([2, 5, 8, 0, 2, -8, 4, 3, 1])
 
 
-df = pd.DataFrame(np.random.randn(100, 4), columns='A B C D'.split())
-print(df.head())
+data = [go.Scatter(x=x, y=y)]
+fig = go.Figure(data=data, layout=go.Layout(title='Offline Plotly Testing', width=800, height=500,
+                                            xaxis=dict(title='X-axis'), yaxis=dict(title='Y-axis')))
 
-df2 = pd.DataFrame({'Category': ['A', 'B', 'C'], 'Values': [32, 43, 50]})
-print(df2.head())
 
-df.iplot(kind='scatter', x='A', y='B')
+plot(fig, show_link=False)
